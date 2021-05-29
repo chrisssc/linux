@@ -91,6 +91,13 @@ config SND_BCM2708_SOC_HIFIBERRY_AMP
         help
          Say Y or M if you want to add support for the HifiBerry Amp amplifier board.
 
+config SND_BCM2708_SOC_EARLYREFLECTIONS_DAC
+        tristate "Support for Early Reflections DAC"
+        depends on SND_BCM2708_SOC_I2S || SND_BCM2835_SOC_I2S
+        select SND_SOC_PCM512x_SPI
+        help
+         Say Y or M if you want to add support for Early Reflections DAC.
+
  config SND_BCM2708_SOC_PIFI_40
          tristate "Support for the PiFi-40 amp"
          depends on SND_BCM2708_SOC_I2S || SND_BCM2835_SOC_I2S
